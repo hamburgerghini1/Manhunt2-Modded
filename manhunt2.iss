@@ -12,7 +12,6 @@ PrivilegesRequired=admin
 AppPublisher=Rockstar North, modded by Hamburgerghini1
 DefaultGroupName=Manhunt 2 Modded
 UninstallDisplayIcon={app}\Manhunt2.exe
-DiskSpanning=true
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -28,6 +27,7 @@ Name: "{group}\Manhunt2-Modded"; Filename: "{app}\Manhunt2.exe"
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "DisplayName"; ValueData: "{#MyAppName}"; Flags: uninsdeletevalue
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "UninstallString"; ValueData: """{uninstallexe}"""; Flags: uninsdeletevalue
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "DisplayIcon"; ValueData: "{app}\Manhunt2.exe"; Flags: uninsdeletevalue
+Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "Publisher"; ValueData: "Rockstar North, modded by Hamburgerghini1"; Flags: uninsdeletevalue
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "URLInfoAbout"; ValueData: "https://github.com/hamburgerghini1/manhunt2-Modded/"; Flags: uninsdeletevalue
 
 [UninstallDelete]
