@@ -5,6 +5,8 @@ Game is taken from https://oldgamesdownload.com/manhunt-2/
 
 Just download the installer from releases
 
+Installer is created using Inno Setup
+
 # Mods in the package
 
 https://www.nexusmods.com/manhunt2/mods/20?tab=description
