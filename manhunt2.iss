@@ -1,4 +1,4 @@
-#define MyAppId "Manhunt2Modded"
+#define MyAppId "{00cd92d9-df05-472b-b71d-0aba0a644941}"
 #define MyAppName "Manhunt 2 Modded"
 
 [Setup]
