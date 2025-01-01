@@ -19,7 +19,6 @@ Compression=bzip/7
 Uninstallable=yes
 
 [Languages]
-
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
