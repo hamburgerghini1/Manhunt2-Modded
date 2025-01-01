@@ -19,6 +19,8 @@ https://github.com/majesticR3/mh2Patch/
 
 https://github.com/ermaccer/Manhunt2.PluginMH2
 
+NoCD Patch
+
 
 # Copyright Disclaimer
 This project includes game files for Manhunt 2 alongside mods and tools for convenience and ease of installation. While Manhunt 2 is no longer commercially available, it remains protected under copyright law.
