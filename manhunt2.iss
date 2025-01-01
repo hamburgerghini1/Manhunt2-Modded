@@ -1,4 +1,4 @@
-#define MyAppId "{00cd92d9-df05-472b-b71d-0aba0a644941}"
+#define MyAppId "{{00cd92d9-df05-472b-b71d-0aba0a644941}}"
 #define MyAppName "Manhunt 2 Modded"
 
 [Setup]
@@ -11,13 +11,19 @@ OutputBaseFilename=Manhunt2Modded-Setup
 PrivilegesRequired=admin
 AppPublisher=Rockstar North, modded by Hamburgerghini1
 DefaultGroupName=Manhunt 2 Modded
+LicenseFile=copyright.txt
 UninstallDisplayIcon={app}\Manhunt2.exe
+DiskSpanning=true
+SolidCompression=yes
+Compression=bzip/7
+Uninstallable=yes
 
 [Languages]
+
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "C:\Users\tommi\Downloads\Manhunt_2_Win_Files_EN\Manhunt 2\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\tommi\Downloads\Manhunt2\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{commondesktop}\Manhunt2-Modded"; Filename: "{app}\Manhunt2.exe"
