@@ -3,7 +3,7 @@ Simple installer for Manhunt 2 that has the most essential mods already installe
 
 Game is taken from https://oldgamesdownload.com/manhunt-2/
 
-Just download the installer from releases
+Just download the installer from releases, the ISS file is for creating the installer executable
 
 Installer is created using Inno Setup
 
