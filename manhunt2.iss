@@ -5,7 +5,7 @@
 AppId={#MyAppId}
 AppName={#MyAppName}
 AppVersion=1.0
-DefaultDirName={commonpf}\Manhunt 2
+DefaultDirName={pf}\Manhunt 2
 OutputDir=.
 OutputBaseFilename=Manhunt2Modded-Setup
 PrivilegesRequired=admin
@@ -29,6 +29,7 @@ Name: "{commondesktop}\Manhunt2-Modded"; Filename: "{app}\Manhunt2.exe"
 Name: "{group}\Manhunt2-Modded"; Filename: "{app}\Manhunt2.exe"
 
 [Registry]
+; Avoid creating duplicate uninstall entries by using only the AppId-based uninstall key
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "DisplayName"; ValueData: "{#MyAppName}"; Flags: uninsdeletevalue
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "UninstallString"; ValueData: """{uninstallexe}"""; Flags: uninsdeletevalue
 Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "DisplayIcon"; ValueData: "{app}\Manhunt2.exe"; Flags: uninsdeletevalue
