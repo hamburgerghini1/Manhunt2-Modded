@@ -5,7 +5,7 @@
 AppId={#MyAppId}
 AppName={#MyAppName}
 AppVersion=1.0
-DefaultDirName={pf}\Manhunt 2
+DefaultDirName={commonpf}\Manhunt 2
 OutputDir=.
 OutputBaseFilename=Manhunt2Modded-Setup
 PrivilegesRequired=admin
