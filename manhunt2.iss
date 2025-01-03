@@ -15,7 +15,7 @@ LicenseFile=copyright.txt
 UninstallDisplayIcon={app}\Manhunt2.exe
 DiskSpanning=true
 SolidCompression=yes
-Compression=bzip/7
+Compression=bzip
 Uninstallable=yes
 
 [Languages]
@@ -28,21 +28,32 @@ Source: "C:\Users\tommi\Downloads\Manhunt2\*"; DestDir: "{app}"; Flags: ignoreve
 Name: "{commondesktop}\Manhunt2-Modded"; Filename: "{app}\Manhunt2.exe"
 Name: "{group}\Manhunt2-Modded"; Filename: "{app}\Manhunt2.exe"
 
-[Registry]
-; Avoid creating duplicate uninstall entries by using only the AppId-based uninstall key
-Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "DisplayName"; ValueData: "{#MyAppName}"; Flags: uninsdeletevalue
-Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "UninstallString"; ValueData: """{uninstallexe}"""; Flags: uninsdeletevalue
-Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "DisplayIcon"; ValueData: "{app}\Manhunt2.exe"; Flags: uninsdeletevalue
-Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "Publisher"; ValueData: "Rockstar North, modded by Hamburgerghini1"; Flags: uninsdeletevalue
-Root: HKLM; Subkey: "Software\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppId}"; ValueType: string; ValueName: "URLInfoAbout"; ValueData: "https://github.com/hamburgerghini1/manhunt2-Modded/"; Flags: uninsdeletevalue
-
-[UninstallDelete]
-Type: filesandordirs; Name: "{app}\*"
-Type: files; Name: "{commondesktop}\Manhunt2-Modded.lnk"
-Type: files; Name: "{group}\Manhunt2-Modded.lnk"
-Type: dirifempty; Name: "{app}"
-
 [Code]
+const
+  InnoLicenseText = 
+    'This is the content of the second license file. ' +
+    'You can add more lines here as needed.';
+
+var
+  InnoLicensePage: TWizardPage;
+  RichEdit: TRichEditViewer;
+
+procedure InitializeWizard;
+begin
+  // Create a new page for the second license
+  InnoLicensePage := CreateCustomPage(wpLicense, 'Additional License Agreement',
+    'Please review the following license agreement:');
+  
+  RichEdit := TRichEditViewer.Create(InnoLicensePage);
+  RichEdit.Parent := InnoLicensePage.Surface;
+  RichEdit.Width := InnoLicensePage.SurfaceWidth;
+  RichEdit.Height := InnoLicensePage.SurfaceHeight;
+  RichEdit.ScrollBars := ssBoth;
+  RichEdit.WordWrap := True;
+  RichEdit.ReadOnly := True;
+  RichEdit.Text := InnoLicenseText;
+end;
+
 procedure CurStepChanged(CurStep: TSetupStep);
 begin
   if CurStep = ssDone then
