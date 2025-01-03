@@ -15,7 +15,7 @@ LicenseFile=copyright.txt
 UninstallDisplayIcon={app}\Manhunt2.exe
 DiskSpanning=true
 SolidCompression=yes
-Compression=bzip
+Compression=bzip/9
 Uninstallable=yes
 
 [Languages]
@@ -31,8 +31,40 @@ Name: "{group}\Manhunt2-Modded"; Filename: "{app}\Manhunt2.exe"
 [Code]
 const
   InnoLicenseText = 
-    'This is the content of the second license file. ' +
-    'You can add more lines here as needed.';
+    'This installer is created using Inno Setup' + #13#10 +
+    '' + #13#10 +
+    'Inno Setup License' + #13#10 +
+    '==================' + #13#10 +
+    '' + #13#10 +
+    'Except where otherwise noted, all of the documentation and software included in the Inno Setup' + #13#10 +
+    'package is copyrighted by Jordan Russell.' + #13#10 +
+    '' + #13#10 +
+    'Copyright (C) 1997-2024 Jordan Russell. All rights reserved.' + #13#10 +
+    'Portions Copyright (C) 2000-2024 Martijn Laan. All rights reserved.' + #13#10 +
+    '' + #13#10 +
+    'This software is provided "as-is," without any express or implied warranty. In no event shall the' + #13#10 +
+    'author be held liable for any damages arising from the use of this software.' + #13#10 +
+    '' + #13#10 +
+    'Permission is granted to anyone to use this software for any purpose, including commercial' + #13#10 +
+    'applications, and to alter and redistribute it, provided that the following conditions are met:' + #13#10 +
+    '' + #13#10 +
+    '1. All redistributions of source code files must retain all copyright notices that are currently in' + #13#10 +
+    '   place, and this list of conditions without modification.' + #13#10 +
+    '' + #13#10 +
+    '2. All redistributions in binary form must retain all occurrences of the above copyright notice and' + #13#10 +
+    '   web site addresses that are currently in place (for example, in the About boxes).' + #13#10 +
+    '' + #13#10 +
+    '3. The origin of this software must not be misrepresented; you must not claim that you wrote the' + #13#10 +
+    '   original software. If you use this software to distribute a product, an acknowledgment in the' + #13#10 +
+    '   product documentation would be appreciated but is not required.' + #13#10 +
+    '' + #13#10 +
+    '4. Modified versions in source or binary form must be plainly marked as such, and must not be' + #13#10 +
+    '   misrepresented as being the original software.' + #13#10 +
+    '' + #13#10 +
+    '' + #13#10 +
+    'Jordan Russell' + #13#10 +
+    'jr-2020 AT jrsoftware.org' + #13#10 +
+    'https://jrsoftware.org/';
 
 var
   InnoLicensePage: TWizardPage;
